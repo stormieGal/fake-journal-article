@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+main {
+  margin: 0 16px;
+}
+
+.row {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.row .left,
+.row .right {
+  width: 25%;
+}
+
+.row .middle {
+  width: 50%;
+}
+
+.row article,
+section.bottom {
+  border: 1px solid grey;
+  border-top: 3px solid black;
+}
+
+article {
+  padding: 0 8px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: clamp(1rem, 1rem + 0.3vw, 2rem);
+  font-family: "Libre Caslon Display", serif;
+}
+
+section.bottom {
+  --total_height: 383px;
+
+  display: flex;
+  height: var(--total_height);
+}
+
+section.bottom article {
+  width: 25%;
+  border-right: 1px solid grey;
+}
+
+section.bottom nav {
+  width: 75%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+
+  --height_li: calc(var(--total_height) / 5 - 0.8px);
+}
+
+ul li {
+  padding-left: 40px;
+
+  /* Can achieve with flex: neater. But it's not working!  */
+  height: var(--height_li);
+  line-height: var(--height_li);
+}
+
+li:nth-of-type(1) {
+  background-color: bisque;
+}
+
+li:nth-of-type(2) {
+  background-color: rgb(196, 242, 255);
+}
+
+li:nth-of-type(3) {
+  background-color: rgb(106, 179, 105);
+}
+
+li:nth-of-type(4) {
+  background-color: rgb(97, 97, 191);
+}
+
+li:nth-of-type(5) {
+  background-color: rgb(100, 67, 100);
+}
+
+a {
+  text-decoration-line: none;
+  color: grey;
+  font-size: clamp(1rem, 1rem + 0.3vw, 2rem);
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+}
